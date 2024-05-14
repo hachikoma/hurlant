@@ -3,31 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-rgb: 255, 255, 255;
+  --black: 0, 0, 0;
+  --grey: 50, 50, 50;
+  --orange: 235, 122, 41;
+  --orange-light: 229, 185, 154;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--grey));
+}
+
+.bg-orange {
+  background-color: rgb(var(--orange-light));
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+h1 {
+  color: rgb(var(--orange-light));
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+h2 {
+  color: rgb(var(--orange));
+}
+
+.bg-header {
+  background-position: 90% -1px;
+}
+
+nav .header__active-menu-item,
+nav .header__menu-item:hover {
+  border-bottom: 2px solid rgb(var(--orange));
+}
+
+.banner--mask {
+  background-color: black;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  right: 0;
+  bottom: 0;
 }
