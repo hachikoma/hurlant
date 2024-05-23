@@ -8,8 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        header: "url('../public/bg-storm.png')",
+      fontFamily: {
+        roboto: ['var(--roboto)'],
+        orbitron: ['var(--orbitron)'],
       },
     },
   },

@@ -3,11 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background-rgb: 255, 255, 255;
+  --white: 255, 255, 255;
   --black: 0, 0, 0;
   --grey: 50, 50, 50;
   --orange: 235, 122, 41;
-  --orange-light: 229, 185, 154;
+  --orange-light: 247, 228, 214;
+  --green: 136, 164, 125;
+  --green-light: 181, 214, 181;
 }
 
 body {
@@ -17,6 +19,9 @@ body {
 .bg-orange {
   background-color: rgb(var(--orange-light));
 }
+.bg-green {
+  background-color: rgb(var(--green-light));
+}
 
 @layer utilities {
   .text-balance {
@@ -25,18 +30,23 @@ body {
 }
 
 h1 {
-  color: rgb(var(--orange-light));
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 3rem;
+  color: rgb(var(--white));
+  font-weight: 900;
+  opacity: 1;
+  font-size: 2.2rem;
+  text-align: right;
 }
 
 h2 {
-  color: rgb(var(--orange));
+  color: rgb(var(--green));
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
 }
 
-.bg-header {
-  background-position: 90% -1px;
+p {
+  margin-bottom: 2rem;
 }
 
 nav .header__active-menu-item,
@@ -44,9 +54,9 @@ nav .header__menu-item:hover {
   border-bottom: 2px solid rgb(var(--orange));
 }
 
-.banner--mask {
+.banner__mask {
   background-color: black;
-  opacity: 0.2;
+  opacity: 0.1;
   top: 0;
   left: 0;
   height: 100%;
