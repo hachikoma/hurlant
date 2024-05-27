@@ -1,20 +1,6 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
-import { Orbitron } from 'next/font/google';
-
-import './globals.css';
-
-const roboto = Roboto({
-  subsets: ['latin'],
-  variable: '--roboto',
-  weight: ['300', '400', '500', '700'],
-});
-
-const orbitron = Orbitron({
-  subsets: ['latin'],
-  variable: '--orbitron',
-  weight: ['400', '500', '600', '700', '800', '900'],
-});
+import { roboto, orbitron } from '@/app/ui/fonts';
+import '@/app/globals.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -28,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${roboto.variable} ${orbitron.variable}`}>
+      <body className={`${roboto.variable} ${orbitron.variable} antialiased`}>
         {children}
       </body>
     </html>

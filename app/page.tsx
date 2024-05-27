@@ -5,15 +5,15 @@ export default function Home() {
     <div className="font-roboto">
       <header
         className="
-      header 
-      flex 
-      justify-between  
-      items-center
-      bg-no-repeat
-      bg-[url('../public/bg-storm.png'),_url('../public/bg-storm-b.png')]
-      bg-[position:60%_top,_right_bottom] 
-      bg-[length:220px,_220px] 
-      pl-14 pr-24 py-12"
+        header 
+        flex 
+        justify-between  
+        items-center
+        bg-no-repeat
+        bg-[url('../public/bg-storm.png'),_url('../public/bg-storm-b.png')]
+        bg-[position:60%_-15px,_95%_bottom] 
+        bg-[length:220px,_220px] 
+        pl-14 pr-24 py-12"
       >
         <div className="header__logo flex">
           <a
@@ -31,7 +31,10 @@ export default function Home() {
           </a>
         </div>
         <nav className="header__inline-menu">
-          <ul className="flex gap-6 text-xs uppercase" role="list">
+          <ul
+            className="flex gap-6 text-xs uppercase font-orbitron"
+            role="list"
+          >
             <li>
               <a
                 href=""
