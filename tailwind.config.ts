@@ -12,6 +12,9 @@ const config: Config = {
         roboto: ['var(--roboto)'],
         orbitron: ['var(--orbitron)'],
       },
+      backgroundImage: {
+        header: "url('../public/bg-storm.png')",
+      },
     },
   },
   plugins: [],

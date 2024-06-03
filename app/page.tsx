@@ -6,13 +6,11 @@ export default function Home() {
       <header
         className="
         header 
+        bg-header 
+        justify-between
         flex 
-        justify-between  
         items-center
-        bg-no-repeat
-        bg-[url('../public/bg-storm.png'),_url('../public/bg-storm-b.png')]
-        bg-[position:60%_-15px,_95%_bottom] 
-        bg-[length:220px,_220px] 
+        bg-no-repeat 
         pl-14 pr-24 py-12"
       >
         <div className="header__logo flex">
@@ -25,16 +23,13 @@ export default function Home() {
               src="/logo-hurlant-final.png"
               alt="Cycles Hurlant Logo"
               width={200}
-              height={117}
+              height={113}
               priority
             />
           </a>
         </div>
-        <nav className="header__inline-menu">
-          <ul
-            className="flex gap-6 text-xs uppercase font-orbitron"
-            role="list"
-          >
+        <nav className="header__inline-menu pl-16">
+          <ul className="flex gap-6 text-xs uppercase" role="list">
             <li>
               <a
                 href=""
@@ -71,7 +66,7 @@ export default function Home() {
             <li>
               <a
                 href=""
-                className="header__menu-item header__menu-item list-menu__item pb-1 link link--text focus-inset "
+                className="header__menu-item list-menu__item pb-1 link link--text focus-inset "
               >
                 Instagram
               </a>
@@ -94,11 +89,25 @@ export default function Home() {
             />
           </div>
 
-          <div className="banner__content h-full w-1/2 absolute flex-col justify-start flex items-center py-20 pr-24">
-            <h1 className="font-orbitron uppercase mb-28">Le cuivré</h1>
-            <div className="bg-white bg-opacity-90 px-20 py-10">
+          <div className="banner__content h-full flex flex-col w-1/2 absolute py-20 pr-24 pl-10">
+            <h2 className="banner__heading no-after uppercase heading2 heading2--orangelight mb-28 ">
+              <span className="block text-sm lowercase pb-2">
+                Cycles Hurlant
+              </span>
+              Hurlant #1 : Fury
+            </h2>
+            <div className="gdlr-core-pbf-element">
+              <div className="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-small-left">
+                <div className="gdlr-core-divider-container gdlr-core-left-align">
+                  <div className="gdlr-core-divider-line gdlr-core-skin-divider">
+                    <div className="gdlr-core-divider-line-bold  gdlr-core-skin-divider"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="banner__button flex mt-12 items-center">
               <a
-                className="text-white hover:underline uppercase font-mono flex items-center font-semibold text-xs px-4 py-3 bg-black"
+                className="button-primary button--orangelight flex items-center hover:underline uppercase font-mono text-xs px-4 py-3"
                 href="/"
               >
                 Découvrir
@@ -108,7 +117,7 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-5 h-4 text-white inline"
+                  className="w-5 h-4 inline"
                 >
                   <path
                     strokeLinecap="round"
@@ -120,10 +129,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="presentation bg-orange grid grid-cols-2 gap-4">
+        <div className="presentation bg-orangelight grid grid-cols-2 gap-4">
           <div className="pl-10 pr-24 pt-24">
-            <h2 className="heading2">
-              Des cycles de qualité, sur-mesure et éco-responsables.
+            <h2 className="heading2 heading2--green">
+              Cycles Hurlant, la genèse.
             </h2>
             <p>
               Quisque facilisis pellentesque mi non feugiat. Curabitur maximus
@@ -131,18 +140,23 @@ export default function Home() {
               vulputate tortor, et elementum nulla. Etiam rutrum congue augue,
               quis hendrerit dui eleifend quis.
             </p>
+
             <p>
-              Suspendisse condimentum porttitor erat, ut interdum nibh commodo
-              vel. Quisque nec purus sit amet tellus rhoncus luctus ut id quam.
-              Sed et rutrum lectus. Vivamus quis massa mauris. Praesent et massa
-              sed nisl tincidunt dignissim. In hac habitasse platea dictumst.
+              Quisque facilisis pellentesque mi non feugiat. Curabitur maximus
+              mauris a erat dapibus tincidunt non vel libero. Integer id
+              vulputate tortor, et elementum nulla. Etiam rutrum congue augue,
+              quis hendrerit dui eleifend quis.
             </p>
+
             <p>
-              Integer vel venenatis ligula. Cras blandit pretium arcu et
-              vehicula.
+              Quisque facilisis pellentesque mi non feugiat. Curabitur maximus
+              mauris a erat dapibus tincidunt non vel libero. Integer id
+              vulputate tortor, et elementum nulla. Etiam rutrum congue augue,
+              quis hendrerit dui eleifend quis.
             </p>
+
             <a
-              className="text-white hover:underline uppercase font-mono font-semibold text-xs px-4 py-3 bg-black"
+              className="button--green button-primary hover:underline uppercase font-mono font-semibold text-xs px-4 py-3 mt-10"
               href="/"
             >
               Découvrir
@@ -152,7 +166,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-4 text-white inline"
+                className="w-5 h-4 text-green inline"
               >
                 <path
                   strokeLinecap="round"
@@ -174,65 +188,149 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="mea px-10 py-20">
-          <h2 className="mea__heading mb-12">Les machines</h2>
+
+        <div className="mea px-10 py-24">
+          <div className="mea__title-container flex justify-center mb-10">
+            <h2 className="mea__title font-medium heading2 uppercase heading2--green heading2--border text-sm font-orbitron no-after ">
+              Les dernières machines
+            </h2>
+          </div>
           <div className="mea__grid">
-            <ul className="mea__grid--list grid grid-cols-4 gap-3">
-              <li>
-                <a href="">
-                  <Image
-                    className=""
-                    src="/home/uno.webp"
-                    alt=""
-                    width={400}
-                    height={325}
-                    priority
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <Image
-                    className=""
-                    src="/home/dos.webp"
-                    alt=""
-                    width={400}
-                    height={325}
-                    priority
-                  />
-                </a>
+            <ul className="mea__grid-list grid grid-cols-4 gap-3">
+              <li className="mea__grid-item">
+                <div className="mea__cardwrapper flex flex-col-reverse">
+                  <div className="mea__card-information">
+                    <div className="mea__card-information__wrapper">
+                      <h3 className="mea__card-information__text font-orbitron text-sm pt-3 pb-1 font-light">
+                        <a href="/machines/hurlant-1">Hurlant - Fury</a>
+                      </h3>
+
+                      <div className="text-green mea__card-information__price text-sm ">
+                        <span>400,00 EUR</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mea__card-product">
+                    <div className="mea__card-product__inner overflow-hidden relative">
+                      <div className="mea__card-product__img hover:scale-105 cursor-pointer transition-all duration-500">
+                        <Image
+                          src="/home/uno.webp"
+                          alt=""
+                          width={400}
+                          height={325}
+                          priority
+                        />
+                      </div>
+                      <div className="mea__card-product__badge mea__card-product__badge--sale absolute bottom-2 left-3 text-xs text-white ">
+                        <span>Sale</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <a href="">
-                  <Image
-                    className=""
-                    src="/home/tres.webp"
-                    alt=""
-                    width={400}
-                    height={325}
-                    priority
-                  />
-                </a>
+              <li className="mea__grid-item">
+                <div className="mea__cardwrapper flex flex-col-reverse">
+                  <div className="mea__card-information">
+                    <div className="mea__card-information__wrapper">
+                      <h3 className="mea__card-information__text font-orbitron text-sm pt-3 pb-1 font-light">
+                        <a href="/machines/hurlant-1">Giant Cadex</a>
+                      </h3>
+
+                      <div className="text-green mea__card-information__price text-sm ">
+                        <span>350,00 EUR</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mea__card-product">
+                    <div className="mea__card-product__inner overflow-hidden relative">
+                      <div className="mea__card-product__img hover:scale-105 cursor-pointer transition-all duration-500">
+                        <Image
+                          src="/home/dos.webp"
+                          alt=""
+                          width={400}
+                          height={325}
+                          priority
+                        />
+                      </div>
+                      <div className="mea__card-product__badge mea__card-product__badge--sold absolute bottom-2 left-3 text-xs text-white ">
+                        <span>Sold</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
 
-              <li>
-                <a href="">
-                  <Image
-                    className=""
-                    src="/home/cinquo.webp"
-                    alt=""
-                    width={400}
-                    height={325}
-                    priority
-                  />
-                </a>
+              <li className="mea__grid-item">
+                <div className="mea__cardwrapper flex flex-col-reverse">
+                  <div className="mea__card-information">
+                    <div className="mea__card-information__wrapper">
+                      <h3 className="mea__card-information__text font-orbitron text-sm pt-3 pb-1 font-light">
+                        <a href="/machines/hurlant-1">Peugeot PR10</a>
+                      </h3>
+
+                      <div className="text-green mea__card-information__price text-sm ">
+                        <span>450,00 EUR</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mea__card-product">
+                    <div className="mea__card-product__inner overflow-hidden relative">
+                      <div className="mea__card-product__img hover:scale-105 cursor-pointer transition-all duration-500">
+                        <Image
+                          src="/home/tres.webp"
+                          alt=""
+                          width={400}
+                          height={325}
+                          priority
+                        />
+                      </div>
+                      <div className="mea__card-product__badge mea__card-product__badge--sale absolute bottom-2 left-3 text-xs text-white ">
+                        <span>Sale</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mea__grid-item">
+                <div className="mea__cardwrapper flex flex-col-reverse">
+                  <div className="mea__card-information">
+                    <div className="mea__card-information__wrapper">
+                      <h3 className="mea__card-information__text font-orbitron text-sm pt-3 pb-1 font-light">
+                        <a href="/machines/hurlant-1">
+                          Giant Peloton Superlite
+                        </a>
+                      </h3>
+
+                      <div className="text-green mea__card-information__price text-sm ">
+                        <span>300,00 EUR</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mea__card-product">
+                    <div className="mea__card-product__inner overflow-hidden relative">
+                      <div className="mea__card-product__img hover:scale-105 cursor-pointer transition-all duration-500">
+                        <Image
+                          src="/home/cinquo.webp"
+                          alt=""
+                          width={400}
+                          height={325}
+                          priority
+                        />
+                      </div>
+                      <div className="mea__card-product__badge mea__card-product__badge--sale absolute bottom-2 left-3 text-xs text-white ">
+                        <span>Sale</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
-          <div className="mea-button my-20 flex justify-center">
+          <div className="mea-button mt-20 flex justify-center">
             <a
-              className="text-white flex-inline hover:underline uppercase font-mono flex items-center font-semibold text-xs px-4 py-3 bg-black"
+              className="button--green-inverse button-primary hover:underline uppercase font-mono font-semibold text-xs px-4 py-3"
               href="/"
             >
               Découvrir
@@ -253,7 +351,121 @@ export default function Home() {
             </a>
           </div>
         </div>
+
+        <div className="values bg-greenlight grid grid-cols-3 gap-2">
+          <div className="values__container py-14 px-10">
+            <h2 className="heading2 heading2--green no-after">Lorem ipsum</h2>
+            <p>
+              Quisque facilisis pellentesque mi non feugiat. Curabitur maximus
+              mauris a erat dapibus tincidunt non vel libero. Integer id
+              vulputate tortor, et elementum nulla. Etiam rutrum congue augue,
+              quis hendrerit dui eleifend quis.
+            </p>
+            <a
+              className="button--green button-primary hover:underline uppercase font-mono font-semibold text-xs px-4 py-3 "
+              href="/"
+            >
+              Découvrir
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-4 text-green inline"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div className="values__container py-14 px-10">
+            <h2 className="heading2 heading2--green no-after">
+              Dolor sit amet
+            </h2>
+
+            <p>
+              Suspendisse condimentum porttitor erat, ut interdum nibh commodo
+              vel. Quisque nec purus sit amet tellus rhoncus luctus ut id quam.
+              Sed et rutrum lectus. Vivamus quis massa mauris. Praesent et massa
+              sed nisl tincidunt dignissim. In hac habitasse platea dictumst.
+            </p>
+
+            <a
+              className="button--green button-primary hover:underline uppercase font-mono font-semibold text-xs px-4 py-3 "
+              href="/"
+            >
+              Découvrir
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-4 text-green inline"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div className="values__container py-14 px-10">
+            <h2 className="heading2 heading2--green no-after">
+              Consectur leche
+            </h2>
+
+            <p>
+              Integer vel venenatis ligula. Cras blandit pretium arcu et
+              vehicula. Integer vel venenatis ligula. Cras blandit pretium arcu
+              et vehicula.
+            </p>
+            <a
+              className="hover:underline uppercase font-mono font-semibold text-xs px-4 py-3 button--green button-primary"
+              href="/"
+            >
+              Découvrir
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-5 h-4 text-green inline"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div className="contact">
+          <div className="contact-container px-10 py-24">
+            <div className="contact-text text-xs">
+              <h2 className="heading2 heading2--green">Contact</h2>
+            </div>
+          </div>
+        </div>
       </main>
+      <div className="copyright">
+        <div className="copyright-container bg-green justify-center flex py-3 items-center justify-center">
+          <div className="copyright-text text-xs font-normal text-white">
+            <p className="p-0 m-0">
+              Copyright 2024 Cycles Hurlant, Tous Droits Réservés
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
