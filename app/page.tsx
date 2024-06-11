@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 
 export default function Home() {
   return (
@@ -39,20 +40,7 @@ export default function Home() {
                 href="/"
               >
                 Découvrir
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-5 h-4 inline"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                  />
-                </svg>
+                <ChevronRightIcon className="size-4 inline ml-1" />
               </a>
             </div>
           </div>
@@ -88,20 +76,7 @@ export default function Home() {
               href="/"
             >
               Découvrir
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-5 h-4 text-green inline"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                />
-              </svg>
+              <ChevronRightIcon className="size-4 inline ml-1" />
             </a>
           </div>
           <div className="presentation__img">

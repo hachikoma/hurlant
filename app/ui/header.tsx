@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import SVGInsta from '@/app/ui/instagram';
 
 export default function Header() {
   return (
@@ -6,7 +7,6 @@ export default function Header() {
       <header
         className="
         header 
-        bg-header 
         justify-between
         flex 
         items-center
@@ -29,10 +29,11 @@ export default function Header() {
           </a>
         </div>
         <nav className="header__inline-menu pl-16">
-          <ul className="flex gap-6 text-xs uppercase" role="list">
+          <ul className="flex gap-6 items-center text-xs uppercase" role="list">
             <li>
               <a
                 href=""
+                title="Accueil"
                 className="header__menu-item header__active-menu-item list-menu__item pb-1 link link--text focus-inset"
               >
                 <span>Accueil</span>
@@ -42,6 +43,7 @@ export default function Header() {
               <a
                 href=""
                 className="header__menu-item list-menu__item pb-1 link link--text focus-inset"
+                title="Les machines"
               >
                 <span>Les machines</span>
               </a>
@@ -68,7 +70,8 @@ export default function Header() {
                 href=""
                 className="header__menu-item list-menu__item pb-1 link link--text focus-inset "
               >
-                Instagram
+                <span className="hidden">Instagram</span>
+                <SVGInsta />
               </a>
             </li>
           </ul>
