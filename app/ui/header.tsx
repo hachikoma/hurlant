@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import SVGInsta from '@/app/ui/instagram';
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -31,43 +32,47 @@ export default function Header() {
         <nav className="header__inline-menu pl-16">
           <ul className="flex gap-6 items-center text-xs uppercase" role="list">
             <li>
-              <a
-                href=""
-                title="Accueil"
+              <Link
                 className="header__menu-item header__active-menu-item list-menu__item pb-1 link link--text focus-inset"
+                href="/"
+                title="Accueil"
               >
                 <span>Accueil</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
+              <Link
+                href="/machines"
                 className="header__menu-item list-menu__item pb-1 link link--text focus-inset"
                 title="Les machines"
               >
                 <span>Les machines</span>
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
-                href=""
+              <Link
+                href="/atelier"
                 className="header__menu-item list-menu__item pb-1 link link--text focus-inset"
+                title="L'atelier"
               >
                 <span>L&rsquo; atelier</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href=""
+              <Link
+                href="/contact"
                 className="header__menu-item list-menu__item pb-1 link link--text focus-inset "
+                title="Contact"
               >
                 <span>Contact</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a
-                href=""
+                href="https://www.instagram.com/cycles.hurlant/"
+                target="_blank"
+                title="Intagram (nouvelle fenêtre)"
                 className="header__menu-item list-menu__item pb-1 link link--text focus-inset "
               >
                 <span className="hidden">Instagram</span>
